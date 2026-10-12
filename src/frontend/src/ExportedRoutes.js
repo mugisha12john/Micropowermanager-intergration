@@ -21,6 +21,8 @@ import ClusterOverviewPage from "@/modules/Dashboard/ClustersOverview.vue"
 import EBikeList from "@/modules/EBikes/EBikes.vue"
 import Reports from "@/modules/ExportedReports/Reports.vue"
 import ForgotPassword from "@/modules/ForgotPassword/ForgotPassword.vue"
+import Batteries from "@/modules/LibreSolarBatteryHealth/Batteries.vue"
+import BatteryDetail from "@/modules/LibreSolarBatteryHealth/BatteryDetail.vue"
 import Login from "@/modules/Login/Login.vue"
 import LoginFooter from "@/modules/Login/LoginFooter.vue"
 import LoginHeader from "@/modules/Login/LoginHeader.vue"
@@ -697,6 +699,33 @@ export const exportedRoutes = [
         name: "Solar Home Systems",
         link: "/solar-home-systems",
         target: "id",
+      },
+    },
+  },
+  {
+    path: "/batteries",
+    component: Batteries,
+    meta: {
+      layout: "default",
+      sidebar: {
+        enabled: true,
+        label: "Batteries",
+        name: "batteries",
+        icon: "battery_full",
+      },
+    },
+  },
+  {
+    path: "/batteries/:batteryId",
+    component: BatteryDetail,
+    meta: {
+      layout: "default",
+      breadcrumb: {
+        level: "detail",
+        label: "Batteries",
+        name: "batteries",
+        link: "/batteries",
+        target: "batteryId",
       },
     },
   },

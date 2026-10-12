@@ -29,7 +29,10 @@
                   {{ menu.meta.sidebar.icon }}
                 </md-icon>
                 <span class="md-list-item-text">
-                  {{ $tc("menu." + menu.meta?.sidebar?.name ?? menu.path) }}
+                  {{
+                    menu.meta?.sidebar?.label ||
+                    $tc("menu." + menu.meta?.sidebar?.name ?? menu.path)
+                  }}
                 </span>
               </md-list-item>
             </router-link>

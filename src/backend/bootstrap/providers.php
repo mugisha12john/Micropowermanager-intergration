@@ -13,6 +13,7 @@ use App\Plugins\EcreeeETender\Providers\EcreeeETenderServiceProvider;
 use App\Plugins\FlutterwavePaymentProvider\Providers\FlutterwavePaymentProviderServiceProvider;
 use App\Plugins\GomeLongMeter\Providers\GomeLongMeterServiceProvider;
 use App\Plugins\KelinMeter\Providers\KelinMeterServiceProvider;
+use App\Plugins\LibreSolarBatteryHealth\Providers\LibreSolarBatteryHealthServiceProvider;
 use App\Plugins\MesombPaymentProvider\Providers\MesombServiceProvider;
 use App\Plugins\MicroStarMeter\Providers\MicroStarMeterServiceProvider;
 use App\Plugins\OdysseyDataExport\Providers\OdysseyDataExportServiceProvider;
@@ -57,6 +58,7 @@ return [
     DemoShsManufacturerServiceProvider::class,
     GomeLongMeterServiceProvider::class,
     KelinMeterServiceProvider::class,
+    LibreSolarBatteryHealthServiceProvider::class,
     MesombServiceProvider::class,
     MicroStarMeterServiceProvider::class,
     OdysseyDataExportServiceProvider::class,
